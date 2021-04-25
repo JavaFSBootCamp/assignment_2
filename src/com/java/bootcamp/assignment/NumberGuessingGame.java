@@ -17,7 +17,7 @@ public class NumberGuessingGame {
 		int maxChances = 5;
 		int guessedNumber = 0;
 		
-		for(int i = 0; i < maxChances; i++) {
+		for(int i = 1; i <= maxChances; i++) {
 			System.out.print("Pick a number between 1 and 100 : ");
 			guessedNumber = scanner.nextInt();
 			
@@ -25,7 +25,7 @@ public class NumberGuessingGame {
 				System.out.println("Your guess is not between 1 and 100, please try again");
 				i--;
 			} else if(guessedNumber < genratedNumber) {
-				System.out.println("Please pick a higher number”");
+				System.out.println("Please pick a higher number");
 			} else if(guessedNumber > genratedNumber) {
 				System.out.println("Please pick a lower number");
 			}
@@ -34,6 +34,7 @@ public class NumberGuessingGame {
 				gameResult = true;
 				break;
 			}
+			//System.out.println(i);
 		}
 		
 		if(gameResult) {
